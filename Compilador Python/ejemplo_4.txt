@@ -1,0 +1,19 @@
+#Ejemplo 4#
+
+importar "conio" #
+importar "standart" #
+importar "inout" #
+importar "math" #
+ 
+principal () :/
+	vacio MACRO PRINCIPAL () :/
+ 
+    		si (== x 0) imprimir ( 0 ) #
+ 
+   		para (i=1; i<=n; i++) :/
+      			potencia = potencia * x # 				
+		:\
+		
+		imprimir ( potencia )		
+	\:
+\:

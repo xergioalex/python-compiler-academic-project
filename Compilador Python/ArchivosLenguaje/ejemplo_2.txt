@@ -1,0 +1,10 @@
+entero i#
+vector entero vec#
+
+para(= i 0 ; < i 10 ; i++):/
+	= vec[i] i#
+	imprimir i#
+
+\:
+
+<<< Segundo Ejemplo >>>

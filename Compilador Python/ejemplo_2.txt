@@ -1,0 +1,20 @@
+#Ejemplo1#
+
+importar "libreria" #
+importar "libreria2" #
+
+entero = y 100 #
+entero x #
+caracter []  = list ["b", "c", "d", "e", "f"] #
+
+principal () :/
+	vacio MACRO PRINCIPAL () :/
+
+		para (entero = i 1 : < i 10 : ++ var) :/
+			= x ( y * i ) #
+			imprimir ( x ) #
+			imprimir ( list [i] ) #	
+		\:
+	\:
+	
+\:

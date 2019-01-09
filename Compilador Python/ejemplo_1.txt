@@ -1,0 +1,24 @@
+#XergioAleX#
+
+importar "lib" #
+importar "lib1" #
+importar "lib2" #
+importar "lib3" #
+importar "lib4" #
+
+constante real = pi 3.14#
+constante real = pin 3.5#
+
+real = hola pi #
+entero[] array #
+entero[]{ = arrayvalores [1.0,1.2,2.4,3.4,5.1,8.6] #
+entero[] = prueba entero[5]#
+real = yeah arrayvalores[3]#
+
+
+vacio macro principal ( ) :/
+
+	= x 3#
+
+
+\:

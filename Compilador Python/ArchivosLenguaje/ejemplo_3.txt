@@ -1,0 +1,14 @@
+entero  Inicio:/
+    int = n 5 #
+    if(n==0)
+        retorno#
+    long = total 1#
+    for (entero = i 2;<= i n; ++i) :/
+        if(primo(i)):/
+            *= total i#
+        \:
+    \:
+    imprimir total#
+\:
+   
+<<< Tercer Ejemplo >>>

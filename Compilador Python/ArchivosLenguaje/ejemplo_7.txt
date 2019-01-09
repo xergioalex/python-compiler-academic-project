@@ -1,0 +1,9 @@
+entero par (entero num):/
+	si(== num 0)
+		retorno 1#
+	sino
+		retorno 0#
+\:
+
+<<< Septimo Ejemplo >>>
+	

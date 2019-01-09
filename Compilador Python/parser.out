@@ -1,0 +1,164 @@
+Created by PLY version 3.4 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> programa
+Rule 1     programa -> CIERRELINEA NICK CIERRELINEA importarlibrerias constantes declaraciones prototipos principal funciones
+Rule 2     programa -> CIERRELINEA NICK CIERRELINEA importarlibrerias principal
+Rule 3     programa -> CIERRELINEA NICK CIERRELINEA importarlibrerias declaraciones principal
+Rule 4     programa -> CIERRELINEA NICK CIERRELINEA principal
+Rule 5     programa -> CIERRELINEA NICK CIERRELINEA constantes principal
+Rule 6     programa -> CIERRELINEA NICK CIERRELINEA declaraciones principal
+Rule 7     programa -> CIERRELINEA NICK CIERRELINEA constantes declaraciones principal
+Rule 8     programa -> CIERRELINEA NICK CIERRELINEA importarlibrerias constantes principal
+Rule 9     programa -> CIERRELINEA NICK CIERRELINEA importarlibrerias constantes declaraciones principal
+Rule 10    programa -> CIERRELINEA NICK CIERRELINEA p rototipos principal funciones
+Rule 11    programa -> CIERRELINEA NICK CIERRELINEA importarlibrerias prototipos principal funciones
+Rule 12    programa -> CIERRELINEA NICK CIERRELINEA importarlibrerias constantes prototipos principal funciones
+Rule 13    programa -> CIERRELINEA NICK CIERRELINEA constantes prototipos principal funciones
+Rule 14    programa -> CIERRELINEA NICK CIERRELINEA constantes declaraciones prototipos principal funciones
+Rule 15    importarlibrerias -> IMPORTAR CADVALOR CIERRELINEA
+Rule 16    importarlibrerias -> importarlibrerias IMPORTAR CADVALOR CIERRELINEA
+Rule 17    prototipos -> prototipofuncion
+Rule 18    prototipos -> prototipos prototipofuncion
+Rule 19    prototipofuncion -> tipodato MACRO NICK IZQPAREN DERPAREN
+Rule 20    prototipofuncion -> tipodato MACRO NICK IZQPAREN declaracionparametros DERPAREN
+Rule 21    declaracionparametros -> nuevoparametro
+Rule 22    declaracionparametros -> declaracionparametros COMA nuevoparametro
+Rule 23    nuevoparametro -> tipodato NICK
+Rule 24    nuevoparametro -> tipodato IZQCORCHET DERCORCHET NICK
+Rule 25    tipodato -> ENTERO
+Rule 26    tipodato -> REAL
+Rule 27    tipodato -> CARACTER
+Rule 28    tipodato -> CADENA
+Rule 29    tipodato -> BOOLEANO
+Rule 30    constantes -> CONSTANTE tipodato ASIGNAR NICK dato CIERRELINEA
+Rule 31    constantes -> constantes CONSTANTE tipodato ASIGNAR NICK dato CIERRELINEA
+Rule 32    dato -> ENTVALOR
+Rule 33    dato -> REALVALOR
+Rule 34    dato -> CARVALOR
+Rule 35    dato -> CADVALOR
+Rule 36    dato -> BOOLVALOR
+Rule 37    datofuncion -> NICK IZQPAREN parametros DERPAREN
+Rule 38    parametros -> dato
+Rule 39    parametros -> parametros COMA dato
+Rule 40    datoarreglo -> NICK IZQCORCHET ENTVALOR DERCORCHET
+Rule 41    operadorternario -> IZQPAREN expresion DERPAREN TERNARIO expresion DOSPUNTOS expresion
+Rule 42    expresion -> expresionsimple
+Rule 43    expresion -> expresioncompuesta
+Rule 44    expresionsimple -> NICK
+Rule 45    expresionsimple -> datofuncion
+Rule 46    expresionsimple -> dato
+Rule 47    expresionsimple -> operadorternario
+Rule 48    expresionsimple -> datoarreglo
+Rule 49    expresioncompuesta -> operador expresion
+Rule 50    expresioncompuesta -> IZQPAREN expresion DERPAREN
+Rule 51    expresioncompuesta -> operador IZQPAREN expresion DERPAREN IZQPAREN expresion DERPAREN
+Rule 52    expresioncompuesta -> operador IZQPAREN expresion DERPAREN dato
+Rule 53    expresioncompuesta -> operador dato expresion
+Rule 54    operador -> SUMA
+Rule 55    operador -> MENOS
+Rule 56    operador -> MASMAS
+Rule 57    operador -> MENOSMENOS
+Rule 58    operador -> MULT
+Rule 59    operador -> DIV
+Rule 60    operador -> MODULO
+Rule 61    operador -> EXP
+Rule 62    operador -> Y
+Rule 63    operador -> O
+Rule 64    operador -> NEGAR
+Rule 65    operador -> MENOR
+Rule 66    operador -> MAYOR
+Rule 67    operador -> MENORIGUAL
+Rule 68    operador -> MAYORIGUAL
+Rule 69    operador -> IGUAL
+Rule 70    operador -> DIFERENTE
+Rule 71    declaraciones -> declaracion
+Rule 72    declaraciones -> declaracionestructura
+Rule 73    declaraciones -> declaraciones declaracion
+Rule 74    declaraciones -> declaraciones declaracionestructura
+Rule 75    declaracion -> tipodato restodeclaracion CIERRELINEA
+Rule 76    restodeclaracion -> NICK
+Rule 77    restodeclaracion -> IZQCORCHET DERCORCHET NICK
+Rule 78    restodeclaracion -> IZQCORCHET DERCORCHET ASIGNAR NICK tipodato IZQCORCHET ENTVALOR DERCORCHET
+Rule 79    restodeclaracion -> asignacion
+Rule 80    restodeclaracion -> IZQCORCHET DERCORCHET ASIGNAR NICK IZQCORCHET parametros DERCORCHET
+Rule 81    declaracionestructura -> ESTRUCTURA NICK IZQPAREN declaraciones DERPAREN
+Rule 82    principal -> VACIO MACRO PRINCIPAL IZQPAREN DERPAREN IZQLLAVE bloque DERLLAVE
+Rule 83    bloque -> sentencia
+Rule 84    bloque -> bloque sentencia
+Rule 85    sentencia -> asignacion CIERRELINEA
+Rule 86    sentencia -> sentenciasalto
+Rule 87    sentencia -> sentencialeer
+Rule 88    sentencia -> sentenciaescribir
+Rule 89    sentencia -> condicionalsi
+Rule 90    sentencia -> ciclohacer
+Rule 91    sentencia -> ciclomientras
+Rule 92    sentencia -> ciclopara
+Rule 93    sentencia -> selector
+Rule 94    ciclohacer -> HACER IZQLLAVE bloque DERLLAVE MIENTRAS IZQPAREN expresion DERPAREN
+Rule 95    ciclomientras -> MIENTRAS IZQPAREN expresion DERPAREN IZQLLAVE bloque DERLLAVE
+Rule 96    ciclopara -> PARA IZQPAREN declaracion DOSPUNTOS expresion DOSPUNTOS asignacion DERPAREN IZQLLAVE bloque DERLLAVE
+Rule 97    selector -> SELECTOR IZQPAREN variablecontrol DERPAREN IZQLLAVE casos DERLLAVE
+Rule 98    variablecontrol -> NICK
+Rule 99    casos -> casoselector
+Rule 100   casos -> casoselector casoespecial
+Rule 101   casoselector -> CASO valorcontrol DOSPUNTOS bloque
+Rule 102   casoselector -> casoselector CASO valorcontrol DOSPUNTOS bloque
+Rule 103   valorcontrol -> ENTVALOR
+Rule 104   valorcontrol -> CARVALOR
+Rule 105   casoespecial -> DEFECTO DOSPUNTOS bloque
+Rule 106   condicionalsi -> SI IZQPAREN expresion DERPAREN IZQLLAVE bloque DERLLAVE SINO IZQLLAVE bloque DERLLAVE
+Rule 107   condicionalsi -> SI IZQPAREN expresion DERPAREN IZQLLAVE bloque DERLLAVE
+Rule 108   sentenciasalto -> tokensalto CIERRELINEA
+Rule 109   tokensalto -> ROMPER
+Rule 110   tokensalto -> CONTINUE
+Rule 111   tokensalto -> RETORNO
+Rule 112   sentencialeer -> LEER IZQPAREN DERPAREN
+Rule 113   sentenciaescribir -> IMPRIMIR IZQPAREN info DERPAREN CIERRELINEA
+Rule 114   info -> dato
+Rule 115   info -> dato COMA dato
+Rule 116   asignacion -> ASIGNAR NICK expresion
+Rule 117   asignacion -> operadorasignacion NICK expresion
+Rule 118   operadorasignacion -> SUMAIGUAL
+Rule 119   operadorasignacion -> MENOSIGUAL
+Rule 120   operadorasignacion -> MULTIGUAL
+Rule 121   operadorasignacion -> DIVIGUAL
+Rule 122   funciones -> declaracionfuncion
+Rule 123   funciones -> funciones declaracionfuncion
+Rule 124   declaracionfuncion -> VACIO MACRO NICK IZQPAREN DERPAREN IZQLLAVE bloque DERLLAVE
+Rule 125   declaracionfuncion -> tipodato MACRO NICK IZQPAREN DERPAREN IZQLLAVE bloque DERLLAVE
+Rule 126   declaracionfuncion -> tipodato MACRO NICK IZQPAREN declaracionparametros DERPAREN IZQLLAVE bloque DERLLAVE
+
+Terminals, with rules where they appear
+
+ASIGNAR              : 30 31 78 80 116
+BOOLEANO             : 29
+BOOLVALOR            : 36
+CADENA               : 28
+CADVALOR             : 15 16 35
+CARACTER             : 27
+CARVALOR             : 34 104
+CASO                 : 101 102
+CIERRELINEA          : 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 16 30 31 75 85 108 113
+COMA                 : 22 39 115
+CONSTANTE            : 30 31
+CONTINUE             : 110
+DEFECTO              : 105
+DERCORCHET           : 24 40 77 78 78 80 80
+DERLLAVE             : 82 94 95 96 97 106 106 107 124 125 126
+DERPAREN             : 19 20 37 41 50 51 51 52 81 82 94 95 96 97 106 107 112 113 124 125 126
+DIFERENTE            : 70
+DIV                  : 59
+DIVIGUAL             : 121
+DOSPUNTOS            : 41 96 96 101 102 105
+ENTERO               : 25
+ENTVALOR             : 32 40 78 103
+ESTRUCTURA           : 81
+EXP                  : 61
+HACER                : 94
+IGUAL                : 69
+IMPORTAR             : 15 16
+IMPRIMIR             : 113
+IZQCORCHET           : 24 40 77 78 78 80 80
+IZQLLAVE     

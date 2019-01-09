@@ -1,0 +1,10 @@
+entero primo(entero x):/
+    entero = raiz / x 2#
+    para (int = i 2; <= i raiz; i++):/
+        si(== % x i 0)
+           retorno 0#        
+        return 1#
+    \:
+\:
+
+<<< Cuarto Ejemplo >>>

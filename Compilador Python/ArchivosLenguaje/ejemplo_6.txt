@@ -1,0 +1,11 @@
+entero val#
+
+selector (val):/
+	caso 1 : = val 1#
+	caso 2 : = val 2#
+	caso 3 : = val 3#
+	caso 4 : = val 4#
+	defecto : = val 0#
+:/
+
+<<< Sexto ejemplo >>>
