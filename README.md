@@ -18,12 +18,13 @@ Resumiendo, las funciones del análisis léxico son:
 
 Consiste en comprobar que los tokens que le suministra el analizador léxico van ordenados según la especificación de la gramática de nuestro lenguaje a compilar “DEUS EX-MACHINE”. Y si no es así, dar los mensajes de error adecuados, pero continuar funcionando sin detenerse, hasta que llegue al final del fichero de entrada. Es esencial que el proceso de análisis no se detenga en el primer error encontrado, ya que así podremos dar información al usuario en un solo informe de todos los errores generados.
 
+---
 
-## DEFINICION
+## DEFINICIÓN
 
 El compilador definido sobre el lenguaje de programación “DEUS EX-MACHINA” el cual traduce “Dios surgido de la maquina” es un lenguaje imperativo estructurado. Es un lenguaje pequeño, sencillo, con fines propiamente académicos y no está especializado en ningún tipo de aplicación.
 
-### DESCRIPCION
+### DESCRIPCIÓN
 
 Las especificaciones del lenguaje se definen a continuación:
 
