@@ -62,3 +62,7 @@ A continuación se muestra de manera muy general los componentes del lenguaje.
 
 
 [PARA SEGUIR LEYENDO MÁS SOBRE LA DEFINICIÓN DEL LENGUAJE, VER INFORME COMPLETO AQUÍ.](COMPILADOR.pdf)
+
+---
+
+**Nota:** Si algún estudiante está interesado en aprender a desarrollar su propio compilador, les recomiendo el libro de ![**Jacinto Ruiz, Compiladores: Teoria e implementación**](https://www.amazon.com/Compiladores-implementaci%C3%B3n-Jacinto-Ruiz-Catal%C3%A1n/dp/8493700894).
